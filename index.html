@@ -129,80 +129,43 @@ section { scroll-margin-top: 70px; }
 h3 { scroll-margin-top: 70px; }
 
 
+/* =====================================================
+   RESPONSIVE + ADAPTIVE LAYOUT (FIXED)
+   ===================================================== */
+
+/* Make headings not hide under sticky tab bar */
+section { scroll-margin-top: 70px; }
+h3 { scroll-margin-top: 70px; }
+
+/* Desktop / default: adaptive gutters instead of 15%/70%/15% */
+.leftpane{ width: 160px; float: left; }
+.rightpane{ width: 160px; float: right; }
+.middlepane{ width: calc(100% - 320px); float: left; }
+
+/* Center the header table (and remove any old left shifting) */
+.top-table{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+}
+
+/* Tablet: shrink gutters */
+@media (max-width: 1100px){
+  .leftpane, .rightpane{ width: 90px; }
+  .middlepane{ width: calc(100% - 180px); }
+}
+
+/* Phone: stack and remove side panes */
+@media (max-width: 900px){
+  .leftpane, .rightpane{ display: none; }
+  .middlepane{ width: 100%; float: none; }
+  .toppane{ width: 100%; }
+  img{ max-width: 100%; height: auto; }
+  .toppane h1{ font-size: 28px; }
+}
 
 	
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 900px) {
-	.toppane, .middlepane, .leftpane, .rightpane {
-    width: 100%;
-    float: none; 
-  }
-}
 
-/* hide empty side gutters on phones (optional but cleaner) */
-  .leftpane, .rightpane {
-    display: none;
-  }
-
- /*  make your header table not shove right by 230px on mobile */
-  .top-table {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-
-  /*  make images scale down on small screens */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /*  slightly smaller text in header blocks on phones */
-  .toppane h1 { font-size: 28px; }
-}
-
-/* =====================================================
-     NEW Adaptive Layout Patch  ← ADD HERE
-     ===================================================== */
-
-  .container{
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-
-  .leftpane{
-    width: 180px;
-    float: left;
-  }
-
-  .rightpane{
-    width: 180px;
-    float: right;
-  }
-
-  .middlepane{
-    width: calc(100% - 360px);
-    float: left;
-  }
-
-  .top-table{
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-
-  @media (max-width: 1100px){
-    .leftpane, .rightpane{ width: 120px; }
-    .middlepane{ width: calc(100% - 240px); }
-  }
-
-  @media (max-width: 900px){
-    .leftpane, .rightpane{ display: none; }
-    .middlepane{ width: 100%; float: none; }
-    .toppane{ width: 100%; }
-    img{ max-width: 100%; height: auto; }
-  }
-
-  .footer{ clear: both; }	
 	
 </style>
 </head>
