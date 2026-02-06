@@ -160,6 +160,49 @@ h3 { scroll-margin-top: 70px; }
   .toppane h1 { font-size: 28px; }
 }
 
+/* =====================================================
+     NEW Adaptive Layout Patch  ← ADD HERE
+     ===================================================== */
+
+  .container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .leftpane{
+    width: 180px;
+    float: left;
+  }
+
+  .rightpane{
+    width: 180px;
+    float: right;
+  }
+
+  .middlepane{
+    width: calc(100% - 360px);
+    float: left;
+  }
+
+  .top-table{
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  @media (max-width: 1100px){
+    .leftpane, .rightpane{ width: 120px; }
+    .middlepane{ width: calc(100% - 240px); }
+  }
+
+  @media (max-width: 900px){
+    .leftpane, .rightpane{ display: none; }
+    .middlepane{ width: 100%; float: none; }
+    .toppane{ width: 100%; }
+    img{ max-width: 100%; height: auto; }
+  }
+
+  .footer{ clear: both; }	
 	
 </style>
 </head>
@@ -167,7 +210,7 @@ h3 { scroll-margin-top: 70px; }
 
 <div class="container">
   <div class="toppane">
-       <table class="top-table";" width="100%">
+       <table class="top-table" width="100%">
      
 	      <tr>
          	<td width="50%" align="middle" style="text-align:centre">
